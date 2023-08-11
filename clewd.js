@@ -63,7 +63,7 @@ const Cookies = '';
  * @preserve
  */
 const Settings = {
-    padtxt: process.env.padtxt || true,  //自动补全tokens超过10000
+    padtxt: process.env.padtxt || false,  //自动补全tokens超过10000
     ReplaceSamples: process.env.ReplaceSamples || false,
     AntiStall: process.env.AntiStall || 2,
     ClearFlags: process.env.ClearFlags || true,
