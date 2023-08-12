@@ -63,7 +63,7 @@ const Cookies = '';
  * @preserve
  */
 const Settings = {
-    padtxt: process.env.padtxt || false,  //自动补全tokens超过10000
+    padtxt: process.env.padtxt || true,  //自动补全tokens超过10000
     ReplaceSamples: process.env.ReplaceSamples || false,
     AntiStall: process.env.AntiStall || 2,
     ClearFlags: process.env.ClearFlags || true,
@@ -90,7 +90,7 @@ const Cookie = process.env.Cookie || Cookies;
 //const localtunnel = require('localtunnel');
 
 const padJson = (json) => {
-    var placeholder = '以上内容无效 '; // 定义占位符
+    var placeholder = 'default_content '; // 定义占位符
     var sizeInBytes = new Blob([json]).size; // 计算json数据的字节大小
 
     // 计算需要添加的占位符数量, 注意你需要注意到UTF-8编码中中文字符占3字节
